@@ -1,0 +1,9 @@
+[package]
+name = "hyper_log_log_test"
+version = "0.1.0"
+authors = ["Vasily Kirichenko <vaskir@gmail.com>"]
+
+[dependencies]
+basichll = "*"
+uuid = { version = "*", features = ["serde", "v4"] }
+time = "*"
