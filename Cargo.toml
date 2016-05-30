@@ -4,6 +4,6 @@ version = "0.1.0"
 authors = ["Vasily Kirichenko <vaskir@gmail.com>"]
 
 [dependencies]
-basichll = "*"
+hyperloglog = "*"
 uuid = { version = "*", features = ["serde", "v4"] }
 time = "*"

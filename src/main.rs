@@ -1,11 +1,11 @@
-extern crate basichll;
+extern crate hyperloglog; 
 extern crate uuid;
 extern crate time;
 
 #[macro_use] 
 mod utils;
  
-use basichll as hll;
+use hyperloglog as hll;
 use uuid::Uuid;
 
 fn main() {
