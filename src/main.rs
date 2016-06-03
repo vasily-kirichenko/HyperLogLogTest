@@ -9,7 +9,7 @@ use hyperloglog as hll;
 use uuid::Uuid;
 
 fn main() {
-    let mut hll = hll::HLL::new(0.01625);
+    let mut hll = hll::HyperLogLog::new(0.01625);
     let keys = (1..1000).map(|_| Uuid::new_v4().to_string()).collect::<Vec<_>>();
     let keys = keys.into_iter().cycle().take(50_000_000).collect::<Vec<_>>();
     
@@ -18,7 +18,7 @@ fn main() {
             hll.insert(&k);
         }
     
-        hll.count().round()
+        hll.len().round()
     });
     
     println!("hll.len().round() = {}", count);
